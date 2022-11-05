@@ -83,3 +83,29 @@ public class ArrayDequeTest {
 }
 
 ```
+
+## 문자열 순서대로 비교 
+```java
+public class Solution {
+    public String[] solution(String[] strings, int n) {
+        Arrays.sort(strings, (o1, o2) -> {
+            if (o1.charAt(n) == o2.charAt(n)) {
+                return o1.compareTo(o2);
+            }
+            return String.valueOf(o1.charAt(n)).compareTo(String.valueOf(o2.charAt(n)));
+        });
+        return strings;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        String[] input = {"sun", "bed", "car"};
+        String[] result = solution.solution(input, 1);
+        System.out.println(Arrays.toString(result));
+
+    }
+}
+```
+- `"문자열".compareTo`로 문자열 비교 가능 
+- `"문자열".compareToIgnoreCase`는 대소문자 상관없이 비교 
+- String []는 Arrays.sort()로 정렬
