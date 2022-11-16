@@ -1,4 +1,4 @@
-package programmers.lv3.문자열내맘대로정하기;
+package programmers.lv1.문자열내맘대로정하기;
 
 import java.util.Arrays;
 
